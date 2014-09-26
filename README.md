@@ -24,6 +24,9 @@ Usage
 
 ```xml
 <c:url var="pageUrl" value="/search?q=keyword" />
-<paginator:display pageUrl="${pageUrl}" maxLinks="8" totalResults=${search.totalResults} itemsPerPage="25" 
-currentPage="${currentPage}" labelFirst="&laquo; First" labelPrev="&lt; Previous" labelNext="Next &gt;" labelLast="Last &raquo;" showFirst="false" showLast="false" />
+<paginator:display pageUrl="${pageUrl}" maxLinks="8" itemsPerPage="25" 
+		totalResults="${search.totalResults}" currentPage="${currentPage}" 
+		labelFirst="&laquo; First" labelPrev="&lt; Previous" 
+		labelNext="Next &gt;" labelLast="Last &raquo;" 
+		showFirst="false" showLast="false" />
 ```
