@@ -22,7 +22,8 @@ Usage
 * showFirst (boolean) Show "First" page link. Default: true
 * showLast (boolean) Show "Last" page link. Default: true
 
-```<c:url var="pageUrl" value="/search?q=keyword" />
+```xml
+<c:url var="pageUrl" value="/search?q=keyword" />
 <paginator:display pageUrl="${pageUrl}" maxLinks="8" totalResults=${search.totalResults} itemsPerPage="25" 
 currentPage="${currentPage}" labelFirst="&laquo; First" labelPrev="&lt; Previous" labelNext="Next &gt;" labelLast="Last &raquo;" showFirst="false" showLast="false" />
 ```
