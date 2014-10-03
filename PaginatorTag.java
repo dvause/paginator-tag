@@ -15,8 +15,8 @@ public class WavePaginationTag extends SimpleTagSupport {
 	private String labelPrev = "Previous";
 	private String labelNext = "Next";
 	private String labelLast = "Last";
-	boolean showFirst = true;
-	boolean showLast = true;
+	private boolean showFirst = true;
+	private boolean showLast = true;
 
 
 	public void doTag() throws JspException {
