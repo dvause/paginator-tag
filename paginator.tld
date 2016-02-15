@@ -21,6 +21,7 @@
 			<name>maxLinks</name>
 			<rtexprvalue>true</rtexprvalue>
 			<type>int</type>
+			<required>true</required>
 		</attribute>
 		<attribute>
 			<name>totalResults</name>
