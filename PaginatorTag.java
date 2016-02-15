@@ -5,7 +5,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 import java.io.Writer;
 
-public class WavePaginationTag extends SimpleTagSupport {
+public class PaginationTag extends SimpleTagSupport {
 	private String pageUrl;
 	private int maxLinks;
 	private int totalResults;
@@ -72,19 +72,24 @@ public class WavePaginationTag extends SimpleTagSupport {
 
 	private String buildPageItem(int page, String label, String className) {
 		StringBuilder link = new StringBuilder("<li");
-		if (className != null) {
-			link.append( "class=\"").append(className).append("\"");
-		}
-		link.append(">")
-				.append("<a href=\"")
-				.append(pageUrl)
-				.append("&page=").append(page)
-				.append("&limit=").append(itemsPerPage)
-				.append("\">")
-				.append(label)
-				.append("</a></li>");
-		return link.toString();
-	}
+	        if (className != null) {
+	            link.append( "class=\"").append(className).append("\"");
+	        }
+	        link.append(">")
+	                .append("<a href=\"")
+	                .append(pageUrl);
+	                if (pageUrl.contains("?")) {
+	                    link.append("&page=");
+	                } else {
+	                    link.append("?page=");
+	                }
+	                link.append(page)
+	                .append("&limit=").append(itemsPerPage)
+	                .append("\">")
+	                .append(label)
+	                .append("</a></li>");
+	        return link.toString();
+	 }
 
 	public void setPageUrl(String pageUrl) {
 		this.pageUrl = pageUrl;
